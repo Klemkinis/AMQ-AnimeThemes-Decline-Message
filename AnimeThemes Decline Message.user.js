@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         AnimeThemes Decline Message
-// @version      0.1
+// @name         Decline Message
+// @version      0.2
 // @match        https://animemusicquiz.com/admin/approveVideos
 // @match        https://animemusicquiz.com/admin/approveVideos?skipMp3=true
 // @run-at: document-end
@@ -16,7 +16,7 @@ function setup() {
     }
 
     var songLink = getSongLink()
-    if (isVideoLinkFromAnimeThemes(songLink)) {
+    if (isVideoLinkFromAnimeThemes(songLink) || isVideoLinkFromOpeningsMoe(songLink)) {
         checkPreviousDeclineMessage(songLink)
     }
 }
@@ -88,4 +88,8 @@ function getVideoPlayer() {
 
 function isVideoLinkFromAnimeThemes(videoLink) {
     return (videoLink.indexOf("animethemes") != -1)
+}
+
+function isVideoLinkFromOpeningsMoe(videoLink) {
+    return (videoLink.indexOf("openings") != -1)
 }
