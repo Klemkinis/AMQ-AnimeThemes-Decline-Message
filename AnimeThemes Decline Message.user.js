@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Decline Message
+// @name         AnimeThemes Decline Message
 // @version      0.2
 // @match        https://animemusicquiz.com/admin/approveVideos
 // @match        https://animemusicquiz.com/admin/approveVideos?skipMp3=true
